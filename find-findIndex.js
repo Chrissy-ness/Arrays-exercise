@@ -7,12 +7,13 @@ function findUserByUsername(arr, username) {
 }
 
 //removeUser 
-function removeUser(arr, username) {
-    const returnedVal = arr.findIndex(function(user) {
+function remover(arr, username) {
+    const result = arr.findIndex(function(user) {
         return user.username === username;
     })
-    if(returnedVal === -1) {
-        return;
+    if(result === -1) {
+        return undefined;
     }
-    return arr.splice(returnedVal, 1)[0];
+    arr.splice(result, 1);
+    console.log(arr);
 }
